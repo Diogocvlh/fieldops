@@ -1,0 +1,42 @@
+# Dependencies and build artifacts
+**/node_modules/
+**/dist/
+**/target/
+**/coverage/
+**/.vite/
+*.tsbuildinfo
+**/test-results/
+**/playwright-report/
+
+# Local environment and credentials
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.jks
+
+# Local database files and logs
+*.mv.db
+*.trace.db
+*.log
+logs/
+
+# Editor and operating system files
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Keep Maven Wrapper source/configuration versioned
+!.mvn/wrapper/maven-wrapper.jar
