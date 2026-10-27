@@ -35,3 +35,7 @@ O frontend foi iniciado temporariamente com `VITE_DATA_MODE=api`. A página carr
 A conexão com uma instância Supabase não foi executada: depende das credenciais do projeto. O profile PostgreSQL, as migrações e o teste condicional estão preparados para essa etapa.
 
 Em 27 de outubro de 2026, a [primeira execução da CI no GitHub Actions](https://github.com/Diogocvlh/fieldops/actions/runs/40580904412) concluiu com sucesso os jobs do frontend e do backend. O job Java disponibilizou um PostgreSQL 17 temporário para a verificação de migrações; isso valida o ambiente da CI, sem substituir a verificação de uma instância Supabase configurada pelo usuário.
+
+## Atualização de dependências
+
+Em 27 de outubro de 2026, o Vite foi atualizado para 8.1.6 para corrigir os alertas identificados no repositório. Após a atualização, a verificação TypeScript, os 20 testes do frontend e o build de produção passaram. A consulta `npm audit` não apontou vulnerabilidades no conjunto de dependências daquele momento; novos avisos podem surgir conforme a base de alertas evolui.
