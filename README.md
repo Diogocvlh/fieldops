@@ -1,6 +1,10 @@
 # FieldOps
 
+[![CI](https://github.com/Diogocvlh/fieldops/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Diogocvlh/fieldops/actions/workflows/ci.yml)
+
 Sistema de gerenciamento de ordens de serviço e equipes técnicas. O monorepo reúne uma interface em português brasileiro, uma API Java e regras operacionais compartilhadas por contrato, com execução local e opção de PostgreSQL hospedado no Supabase.
+
+[Funcionalidades](#funcionalidades) · [Executar a demonstração](#executar-o-frontend) · [Executar a API](#executar-a-api-com-h2) · [Arquitetura](docs/ARCHITECTURE.md) · [Verificações](#verificação)
 
 ![Dashboard do FieldOps com dados fictícios](docs/assets/dashboard-desktop.jpg)
 
@@ -19,6 +23,15 @@ O projeto é um MVP de portfólio. A API desta etapa não possui autenticação 
 - **Relatórios:** totais e recortes por período, status e técnico, calculados a partir dos registros.
 
 As ordens recebem um identificador UUID e um código único. A conclusão registra sua data automaticamente. Os dados de exemplo usam nomes e operações fictícios.
+
+## Decisões de engenharia
+
+- **Acesso aos dados por adaptadores:** a interface utiliza o mesmo contrato nos modos localStorage e HTTP.
+- **Regras no domínio:** atribuições verificam disponibilidade e capacidade; no backend, alterações e atividades são gravadas na mesma transação.
+- **Evolução do banco por migrações:** Flyway versiona o schema PostgreSQL, mantendo credenciais no processo Java.
+- **Verificação automatizada:** a CI executa testes, verificação de tipos, build do frontend e teste de migrações com PostgreSQL.
+
+Consulte a [arquitetura](docs/ARCHITECTURE.md), o [contrato de integração](CONTRACT.md) e a [apresentação técnica](docs/PORTFOLIO.md) para os detalhes e os limites do MVP.
 
 ## Tecnologias
 

@@ -32,4 +32,6 @@ O frontend foi iniciado temporariamente com `VITE_DATA_MODE=api`. A página carr
 
 ## Integrações externas
 
-A conexão com uma instância Supabase não foi executada: depende das credenciais do projeto. O profile PostgreSQL, as migrações e o teste condicional estão preparados para essa etapa. O workflow do GitHub Actions está incluído no repositório; sua execução ocorrerá ao enviar o código para o GitHub.
+A conexão com uma instância Supabase não foi executada: depende das credenciais do projeto. O profile PostgreSQL, as migrações e o teste condicional estão preparados para essa etapa.
+
+Em 27 de outubro de 2026, a [primeira execução da CI no GitHub Actions](https://github.com/Diogocvlh/fieldops/actions/runs/40580904412) concluiu com sucesso os jobs do frontend e do backend. O job Java disponibilizou um PostgreSQL 17 temporário para a verificação de migrações; isso valida o ambiente da CI, sem substituir a verificação de uma instância Supabase configurada pelo usuário.
